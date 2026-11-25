@@ -274,3 +274,40 @@ Database design and diagrams
 Project explanation and presentation
 
  Submit
+CREATE DATABASE agriculture_db;
+
+USE agriculture_db;
+
+CREATE TABLE farmers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    phone VARCHAR(15),
+    address VARCHAR(255)
+);
+
+CREATE TABLE crops (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    crop_name VARCHAR(100),
+    season VARCHAR(50),
+    quantity INT
+);
+
+CREATE TABLE fertilizers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fertilizer_name VARCHAR(100),
+    quantity INT,
+    price DECIMAL(10,2)
+);
+
+CREATE TABLE equipment (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    equipment_name VARCHAR(100),
+    quantity INT,
+    price DECIMAL(10,2)
+);
+
+INSERT INTO farmers (name, phone, address)
+VALUES ('Rahul Kumar', '9876543210', 'Bangalore');
+
+INSERT INTO crops (crop_name, season, quantity)
+VALUES ('Rice', 'Kharif', 100);
